@@ -23,7 +23,7 @@ require 'plantillas/cabecera.php';
     <div class="form-group col-sm-6">
         <input type="text" name="comentario" placeholder="Comentario" class="form-control">
     </div> <br>
-    <button type="submit" class="btn btn-primary btn-block">Guardar Datos</button>
+    <button type="submit" class="btn btn-primary">Guardar Datos</button>
 
 </form>
  <br> <?php
@@ -32,7 +32,7 @@ echo $_REQUEST ["mensaje1"];
 <form action="/Sistema-uno/listado_comentarios.php" method="get">
     <article>
         <h4>Para ver los comentarios registrados: </h4>
-        <button type="submit" class="btn btn-warning">Ver comentarios</button>
+        <button type="submit" class="btn btn-primary">Ver comentarios</button>
     </article>
 </form>
 </body>
