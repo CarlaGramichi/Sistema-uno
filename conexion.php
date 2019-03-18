@@ -1,12 +1,14 @@
 <?php
 function conectar()
 {
-    $servidor = '127.0.0.1';
+    $servidor = 'localhost';
     $usuario = 'root';
     $contrasena = '';
-    $nombreBD = 'mi_primer_sistemita_completo';
+    $nombreBD = 'car_comentarios';
+    $puerto = '3306';
+
     try {
-        $con = new PDO("mysql:host=$servidor;port=3006;dbname=$nombreBD", $usuario, $contrasena);
+        $con = new PDO("mysql:host=$servidor;port=$puerto;dbname=$nombreBD", $usuario, $contrasena);
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }

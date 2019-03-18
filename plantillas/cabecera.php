@@ -8,5 +8,5 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href=" ">
 
-    <title>Sistema uno</title>
+    <title>Comentarios</title>
 </head>

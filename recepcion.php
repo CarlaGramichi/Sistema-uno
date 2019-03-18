@@ -7,7 +7,7 @@ $consulta = $conn ->query("INSERT INTO comentarios(nombre,apellido,email,comenta
 if (!$consulta) {
     var_dump($conn->errorInfo());
 } else {
-    header("Location:/Sistema-uno/index.php/?mensaje1=Los datos se guardaron correctamente.");
+    header("Location:index.php/?mensaje1=Los datos se guardaron correctamente.");
 }
 
 

@@ -28,7 +28,7 @@ require 'plantillas/cabecera.php';
         <td><?= $comenta['nombre'] ?></td>
         <td><?= $comenta['comentario'] ?></td>
          <td class="text-center">
-                <a href="/Sistema-uno/eliminar_comentario.php/?id=<?= $comenta['id'] ?>" class=" "> <button type="submit" class="btn btn-primary"> Eliminar</button><span
+                <a href="eliminar_comentario.php/?id=<?= $comenta['id'] ?>" class=" "> <button type="submit" class="btn btn-primary"> Eliminar</button><span
                             class="glyphicon glyphicon-trash"></span></a>
             </td>
 
@@ -36,7 +36,7 @@ require 'plantillas/cabecera.php';
     <?php endforeach;?>
     </tbody>
 </table>
-<form action="/Sistema-uno" method="post">
+<form action="comentarios" method="post">
     <br><button type="submit" class="btn btn-primary">Volver</button>
 </form>
 </body>
