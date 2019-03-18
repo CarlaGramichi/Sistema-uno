@@ -18,6 +18,7 @@ require 'plantillas/cabecera.php';
         <th>Id</th>
         <th>Nombre</th>
         <th>Comentario</th>
+        <th colspan="3"></th>
 
     </tr>
     </thead>
@@ -31,6 +32,20 @@ require 'plantillas/cabecera.php';
             <td><?= $comenta['comentario'] ?></td>
 
             <td class="text-center">
+                <form action="ver_comentario.php" method="post">
+                    <button type="submit" class="btn btn-primary">Ver</button>
+                    <span class="glyphicon glyphicon-trash"></span>
+                </form>
+            </td>
+
+            <td class="text-center">
+                <form action="editar_comentario.php" method="post">
+                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <span class="glyphicon glyphicon-trash"></span>
+                </form>
+            </td>
+
+            <td class="text-center">
                 <form action="eliminar_comentario.php" method="post">
                     <button type="submit" class="btn btn-primary">Eliminar</button>
                     <span class="glyphicon glyphicon-trash"></span>
@@ -38,7 +53,8 @@ require 'plantillas/cabecera.php';
             </td>
 
         </tr>
-    <?php endforeach; ?>
+
+    <?php endforeach ?>
 
     </tbody>
 
