@@ -32,21 +32,21 @@ require 'plantillas/cabecera.php';
             <td><?= $comenta['comentario'] ?></td>
 
             <td class="text-center">
-                <form action="ver_comentario.php" method="post">
+                <form action="<?=ROOT?>/ver_comentario.php" method="get">
                     <button type="submit" class="btn btn-primary">Ver</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>
             </td>
 
             <td class="text-center">
-                <form action="editar_comentario.php" method="post">
+                <form action="<?=ROOT?>/editar_comentario.php" method="get">
                     <button type="submit" class="btn btn-primary">Editar</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>
             </td>
 
             <td class="text-center">
-                <form action="eliminar_comentario.php/?id=<?= $comenta['id'] ?>" method="post">
+                <form action="<?=ROOT?>/eliminar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
                     <button type="submit" class="btn btn-primary">Eliminar</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>
@@ -60,6 +60,6 @@ require 'plantillas/cabecera.php';
 
 </table>
 
-<a href="index.php">Volver</a>
+<a href="<?=ROOT?>">Volver</a>
 
 </body>

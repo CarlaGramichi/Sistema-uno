@@ -2,6 +2,7 @@
 session_start();
 session_destroy();
 
+require 'conexion.php';
 require 'plantillas/cabecera.php';
 
 ?>
@@ -10,7 +11,7 @@ require 'plantillas/cabecera.php';
 <h1>Bienvenido</h1>
 <h3>Por favor ingrese los siguientes datos:</h3>
 
-<form action="/Sistema-uno/recepcion.php" method="get">
+<form action="<?=ROOT?>/recepcion.php" method="get">
     <div class="form-group col-sm-6">
         <input type="text" name="nombre" placeholder="Nombre" class="form-control" >
     </div> <br>
@@ -29,7 +30,7 @@ require 'plantillas/cabecera.php';
  <br> <?php
 echo $_REQUEST ["mensaje1"];
 ?>
-<form action="/Sistema-uno/listado_comentarios.php" method="get">
+<form action="<?=ROOT?>/listado_comentarios.php" method="get">
     <article>
         <h4>Para ver los comentarios registrados: </h4>
         <button type="submit" class="btn btn-primary">Ver comentarios</button>
