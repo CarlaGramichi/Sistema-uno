@@ -46,7 +46,7 @@ require 'plantillas/cabecera.php';
             </td>
 
             <td class="text-center">
-                <form action="eliminar_comentario.php" method="post">
+                <form action="eliminar_comentario.php/?id=<?= $comenta['id'] ?>" method="post">
                     <button type="submit" class="btn btn-primary">Eliminar</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>

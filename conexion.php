@@ -4,8 +4,8 @@ function conectar()
     $servidor = 'localhost';
     $usuario = 'root';
     $contrasena = '';
-    $nombreBD = 'car_comentarios';
-    $puerto = '3306';
+    $nombreBD = 'mi_primer_sistemita_completo';
+    $puerto = '3006';
 
     try {
         $con = new PDO("mysql:host=$servidor;port=$puerto;dbname=$nombreBD", $usuario, $contrasena);
