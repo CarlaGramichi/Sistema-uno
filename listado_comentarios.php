@@ -59,7 +59,6 @@ require 'plantillas/cabecera.php';
     </tbody>
 
 </table>
-
-<br><a href="<?=ROOT?>">Volver</a>
-
+<h4><? echo $_REQUEST ["mensaje2"]?></h4>
+<a href="<?=ROOT?>">Volver</a>
 </body>
