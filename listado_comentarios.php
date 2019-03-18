@@ -31,10 +31,10 @@ require 'plantillas/cabecera.php';
             <td><?= $comenta['comentario'] ?></td>
 
             <td class="text-center">
-                <a href="eliminar_comentario.php/?id=<?= $comenta['id'] ?>">
+                <form action="eliminar_comentario.php" method="post">
                     <button type="submit" class="btn btn-primary">Eliminar</button>
                     <span class="glyphicon glyphicon-trash"></span>
-                </a>
+                </form>
             </td>
 
         </tr>
@@ -44,9 +44,6 @@ require 'plantillas/cabecera.php';
 
 </table>
 
-<form action="comentarios" method="post">
-    <br>
-    <button type="submit" class="btn btn-primary">Volver</button>
-</form>
+<a href="index.php">Volver</a>
 
 </body>
