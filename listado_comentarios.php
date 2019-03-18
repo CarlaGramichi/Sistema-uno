@@ -2,9 +2,7 @@
 session_start();
 require 'conexion.php';
 $con = conectar();
-
 $consulta = $con->query("SELECT id,nombre,comentario FROM comentarios ");
-
 $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 require 'plantillas/cabecera.php';
 ?>
@@ -12,7 +10,7 @@ require 'plantillas/cabecera.php';
 <body class="container">
 <h1>Comentarios registrados:</h1>
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered" cellspacing="10">
     <thead>
     <tr>
         <th>Id</th>
@@ -32,7 +30,7 @@ require 'plantillas/cabecera.php';
             <td><?= $comenta['comentario'] ?></td>
 
             <td class="text-center">
-                <form action="<?=ROOT?>/ver_comentario.php" method="get">
+                <form action="<?=ROOT?>/ver_comentario.php?id=<?= $comenta['id']?>" method="post">
                     <button type="submit" class="btn btn-primary">Ver</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>

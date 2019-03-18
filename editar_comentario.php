@@ -11,7 +11,8 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 <form action="recepcion_edicion.php/?id=<?= $_REQUEST['id']?>" method="post">
     <?php foreach ($coment as $comenta): ?>
         <div class="form-group col-sm-6">
-            <textarea name="comentario" class="form-control" cols="25" rows="6" ><?=$comenta['comentario']?></textarea>
+         <h5>Comentario:</h5>
+            <textarea name="comentario" class="form-control" cols="25" rows="6" > <?=$comenta['comentario']?></textarea>
         </div>
     <?php endforeach; ?>
    <br><button type="submit" class="btn btn-primary">Guardar Comentario</button>
