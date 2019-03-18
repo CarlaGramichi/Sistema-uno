@@ -39,7 +39,7 @@ require 'plantillas/cabecera.php';
             </td>
 
             <td class="text-center">
-                <form action="<?=ROOT?>/editar_comentario.php" method="get">
+                <form action="<?=ROOT?>/editar_comentario.php?id=<?= $comenta['id']?>" method="post">
                     <button type="submit" class="btn btn-primary">Editar</button>
                     <span class="glyphicon glyphicon-trash"></span>
                 </form>
@@ -60,6 +60,6 @@ require 'plantillas/cabecera.php';
 
 </table>
 
-<a href="<?=ROOT?>">Volver</a>
+<br><a href="<?=ROOT?>">Volver</a>
 
 </body>

@@ -10,7 +10,4 @@ if (!$consulta) {
     header("Location:" . ROOT . "/?mensaje1=Los datos se guardaron correctamente.");
 }
 
-
-//echo $_REQUEST["nombre"];
-
 ?>
