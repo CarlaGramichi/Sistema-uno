@@ -21,7 +21,7 @@ require 'plantillas/cabecera.php';
         <input type="email" name="email" placeholder="Email" class="form-control">
     </div> <br>
     <div class="form-group col-sm-6">
-        <textarea name="comentario" placeholder="Comentario" class="form-control"></textarea>
+        <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control"></textarea>
     </div> <br>
     <button type="submit" class="btn btn-primary">Guardar Datos</button>
 
