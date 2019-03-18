@@ -21,22 +21,32 @@ require 'plantillas/cabecera.php';
 
     </tr>
     </thead>
+
     <tbody>
+
     <?php foreach ($coment as $comenta): ?>
-    <tr>
-        <td><?= $comenta['id'] ?></td>
-        <td><?= $comenta['nombre'] ?></td>
-        <td><?= $comenta['comentario'] ?></td>
-         <td class="text-center">
-                <a href="eliminar_comentario.php/?id=<?= $comenta['id'] ?>" class=" "> <button type="submit" class="btn btn-primary"> Eliminar</button><span
-                            class="glyphicon glyphicon-trash"></span></a>
+        <tr>
+            <td><?= $comenta['id'] ?></td>
+            <td><?= $comenta['nombre'] ?></td>
+            <td><?= $comenta['comentario'] ?></td>
+
+            <td class="text-center">
+                <a href="eliminar_comentario.php/?id=<?= $comenta['id'] ?>">
+                    <button type="submit" class="btn btn-primary">Eliminar</button>
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
             </td>
 
-    </tr>
-    <?php endforeach;?>
+        </tr>
+    <?php endforeach; ?>
+
     </tbody>
+
 </table>
+
 <form action="comentarios" method="post">
-    <br><button type="submit" class="btn btn-primary">Volver</button>
+    <br>
+    <button type="submit" class="btn btn-primary">Volver</button>
 </form>
+
 </body>
