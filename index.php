@@ -1,65 +1,68 @@
-<?php
-session_start();
-session_destroy();
+<?php require 'plantillas/cabecera.php'; ?>
 
-require 'conexion.php';
-require 'plantillas/cabecera.php';
 
-?>
-<body class="container">
+    <h1 class="mt-5">Bienvenido</h1>
 
-<h1>Bienvenido</h1>
-<hr>
-<h3>Por favor ingrese los siguientes datos:</h3>
+    <h4>Por favor ingrese los siguientes datos:</h4>
 
-<form action="<?= ROOT ?>/recepcion.php" method="get">
-    <div class="form-group row">
-        <span style="font-size: 25px" class="col:sm-2"><i class="fa fa-user"></i></span>
-        <div class="col-sm-6">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
-        </div>
+<?php if ($_REQUEST['mensaje1']): ?>
+    <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
+        <span> <i class="fas fa-check"></i> </span>
+        <?= $_REQUEST['mensaje1'] ?>
     </div>
-    <br>
-    <div class="form-group row">
-        <span style="font-size: 25px" class="col:sm-2"><i class="fa fa-user"></i></span>
-        <div class="form-group col-sm-6">
-            <input type="text" name="apellido" placeholder="Apellido" class="form-control">
-        </div>
+<? endif ?>
+
+    <div class="row justify-content-center">
+
+        <form action="<?= ROOT ?>/recepcion.php" method="get" class="col-sm-6 mt-4">
+
+            <div class="form-group row">
+
+                <span style="font-size: 25px" class="col:sm-2"><i class="fa fa-user"></i></span>
+
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                </div>
+
+                <div class="col-sm-5">
+                    <input type="text" name="apellido" placeholder="Apellido" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+
+                <span style="font-size: 25px" class="col:sm-2"><i class="far fa-envelope"></i></span>
+
+                <div class="form-group col-sm-10">
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+
+                <span style="font-size: 25px" class="col:sm-2"><i class="far fa-edit"></i></span>
+
+                <div class="form-group col-sm-10">
+
+                <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control"
+                          required></textarea>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
+
+        </form>
+
     </div>
-    <br>
-    <div class="form-group row">
-        <span style="font-size: 25px" class="col:sm-2"><i class="far fa-envelope"></i></span>
-        <div class="form-group col-sm-6">
-            <input type="email" name="email" placeholder="Email" class="form-control" required>
-        </div>
-    </div>
-    <br>
-    <div class="form-group row">
-        <span style="font-size: 25px" class="col:sm-2"><i class="far fa-edit"></i></span>
-        <div class="form-group col-sm-6">
-        <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control"
-                  required></textarea>
-        </div>
-    </div>
-    <?php if ($_REQUEST['mensaje1']): ?>
-        <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
-            <span> <i class="fas fa-check"></i> </span>
-            <?= $_REQUEST['mensaje1'] ?>
-        </div>
-    <? endif ?>
 
-    <br>
-    <button type="submit" class="btn btn-info col-sm-6">Guardar Datos</button>
+    <hr>
 
-</form>
+    <h4 class="mb-5">Para ver los comentarios registrados: </h4>
 
+    <a href="<?= ROOT ?>/listado_comentarios.php" class="btn btn-primary">Ver comentarios&emsp;<span
+                class="fa fa-list-ul"></span></a>
 
-<form action="<?= ROOT ?>/listado_comentarios.php" method="get">
-    <article>
-        <h4>Para ver los comentarios registrados: </h4>
-        <button type="submit" class="btn btn-primary">Ver comentarios</button>
-    </article>
-</form
-</body>
-</html>
-
+<?php require 'plantillas/footer.php'; ?>

@@ -1,17 +1,16 @@
 <?php
-session_start();
-require 'conexion.php';
+
 require 'plantillas/cabecera.php';
+
 $con = conectar();
 $consulta = $con->query("SELECT id,nombre,comentario FROM comentarios ");
 $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
-require 'plantillas/cabecera.php';
+
 ?>
 
-<body class="container">
-<h1>Comentarios registrados:</h1>
+<h1 class="mt-5">Comentarios registrados:</h1>
 
-<table class="table table-striped table-bordered, table-warning" cellspacing="10">
+<table class="table table-striped table-bordered" cellspacing="10">
     <thead>
     <tr>
         <th>Id</th>
@@ -31,23 +30,20 @@ require 'plantillas/cabecera.php';
             <td><?= $comenta['comentario'] ?></td>
 
             <td class="text-center">
-                <form action="<?=ROOT?>/ver_comentario.php?id=<?= $comenta['id']?>" method="post">
-                    <button type="submit" class="btn btn-primary">Ver</button>
-                    <span class="glyphicon glyphicon-trash"></span>
+                <form action="<?= ROOT ?>/ver_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <button type="submit" class="btn btn-success btn-sm">Ver&emsp;<span class="fa fa-eye"></span></button>
                 </form>
             </td>
 
             <td class="text-center">
-                <form action="<?=ROOT?>/editar_comentario.php?id=<?= $comenta['id']?>" method="post">
-                    <button type="submit" class="btn btn-primary">Editar</button>
-                    <span class="glyphicon glyphicon-trash"></span>
+                <form action="<?= ROOT ?>/editar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <button type="submit" class="btn btn-primary btn-sm">Editar&emsp;<span class="fa fa-edit"></span></button>
                 </form>
             </td>
 
             <td class="text-center">
-                <form action="<?=ROOT?>/eliminar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
-                    <button type="submit" class="btn btn-primary">Eliminar</button>
-                    <span class="glyphicon glyphicon-trash"></span>
+                <form action="<?= ROOT ?>/eliminar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar&emsp;<span class="fa fa-trash"></span></button>
                 </form>
             </td>
 
@@ -58,6 +54,9 @@ require 'plantillas/cabecera.php';
     </tbody>
 
 </table>
-<h4><? echo $_REQUEST ["mensaje2"]?></h4>
-<a href="<?=ROOT?>">Volver</a>
-</body>
+
+<h4><? echo $_REQUEST ["mensaje2"] ?></h4>
+
+<a href="<?= ROOT ?>" class="btn btn-primary"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
+
+<?php require 'plantillas/footer.php'; ?>

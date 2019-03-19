@@ -1,12 +1,13 @@
 <?php
-session_start();
-require 'conexion.php';
+
 require 'plantillas/cabecera.php';
+
 $con = conectar();
 $consulta = $con->query("SELECT id,nombre,apellido,email,comentario FROM comentarios  WHERE id = {$_REQUEST['id']}");
 $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
-//var_dump($coment);
+
 ?>
+
 <body class="container">
 <h1>Datos de Comentario:</h1>
 
@@ -18,7 +19,6 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
         <th>Apellido</th>
         <th>Email</th>
         <th>Comentario</th>
-        <th colspan="3"></th>
     </tr>
     </thead>
     <tbody>
@@ -33,5 +33,7 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
     <?php endforeach ?>
     </tbody>
 </table>
-<a href="<?= ROOT ?>/listado_comentarios.php">Volver</a>
-</body>
+
+<a href="<?= ROOT ?>/listado_comentarios.php" class="btn btn-primary"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
+
+<?php require 'plantillas/footer.php'; ?>
