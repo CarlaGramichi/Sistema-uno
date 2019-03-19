@@ -10,7 +10,7 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <h1 class="mt-5">Comentarios registrados:</h1>
 
-<table class="table table-striped table-bordered" cellspacing="10">
+<table class="table table-striped table-bordered " cellspacing="10">
     <thead>
     <tr>
         <th>Id</th>
@@ -57,6 +57,6 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <h4><? echo $_REQUEST ["mensaje2"] ?></h4>
 
-<a href="<?= ROOT ?>" class="btn btn-primary"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
+<a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php'; ?>

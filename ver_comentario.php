@@ -7,33 +7,20 @@ $consulta = $con->query("SELECT id,nombre,apellido,email,comentario FROM comenta
 $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
-<body class="container">
-<h1>Datos de Comentario:</h1>
-
-<table class="table table-striped table-bordered" cellspacing="10">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Email</th>
-        <th>Comentario</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($coment as $comenta): ?>
-        <tr>
-            <td><?= $comenta['id'] ?></td>
-            <td><?= $comenta['nombre'] ?></td>
-            <td><?= $comenta['apellido'] ?></td>
-            <td><?= $comenta['email'] ?></td>
-            <td><?= $comenta['comentario'] ?></td>
-        </tr>
-    <?php endforeach ?>
-    </tbody>
-</table>
-
-<a href="<?= ROOT ?>/listado_comentarios.php" class="btn btn-primary"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
+<br>
+<div class="card border-info mb-3" style="max-width: 40rem;">
+    <div class="card-header">Comentario</div>
+    <div class="card-body text-info">
+        <h5 class="card-title">Datos</h5>
+        <?php foreach ($coment as $comenta): ?>
+            <p class="card-text">ID: <span><?= $comenta['id'] ?></span></p>
+            <p class="card-text">Nombre: <span><?= $comenta['nombre'] ?></span></p>
+            <p class="card-text">Apellido: <span><?= $comenta['apellido'] ?></span></p>
+            <p class="card-text">Email: <span><?= $comenta['email'] ?></span></p>
+            <p class="card-text">Comentario: <span><?= $comenta['comentario'] ?></span></p>
+        <?php endforeach ?>
+    </div>
+</div>
+<a href="<?= ROOT ?>/listado_comentarios.php" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php'; ?>
