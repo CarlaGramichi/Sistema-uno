@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'conexion.php';
+require 'plantillas/cabecera.php';
 $con = conectar();
 $consulta = $con->query("SELECT id,nombre,comentario FROM comentarios ");
 $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);

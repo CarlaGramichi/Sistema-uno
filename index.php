@@ -21,11 +21,11 @@ require 'plantillas/cabecera.php';
     </div>
     <br>
     <div class="form-group col-sm-6">
-        <input type="email" name="email" placeholder="Email" class="form-control">
+        <input type="email" name="email" placeholder="Email" class="form-control" required>
     </div>
     <br>
     <div class="form-group col-sm-6">
-        <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control"></textarea>
+        <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control" required></textarea>
     </div>
     <br>
     <button type="submit" class="btn btn-primary">Guardar Datos</button>

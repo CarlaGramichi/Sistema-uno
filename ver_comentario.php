@@ -9,6 +9,7 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <body class="container">
 <h1>Datos de Comentario:</h1>
+
 <table class="table table-striped table-bordered" cellspacing="10">
     <thead>
     <tr>
