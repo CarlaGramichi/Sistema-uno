@@ -11,7 +11,7 @@ require 'plantillas/cabecera.php';
 <body class="container">
 <h1>Comentarios registrados:</h1>
 
-<table class="table table-striped table-bordered" cellspacing="10">
+<table class="table table-striped table-bordered, table-warning" cellspacing="10">
     <thead>
     <tr>
         <th>Id</th>
