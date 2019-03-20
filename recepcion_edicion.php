@@ -8,5 +8,5 @@ $coment = $consulta->execute();
 //var_dump($consulta->queryString);
 
 if ($consulta){
-    header("Location:". ROOT ."/listado_comentarios.php/?mensaje2=Edición exitosa.");
+    header("Location:". ROOT ."/listado_comentarios.php/?mensaje2= Los datos se modificaron correctamente.");
 }
