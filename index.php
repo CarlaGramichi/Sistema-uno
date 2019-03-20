@@ -58,11 +58,5 @@
 
     </div>
 
-    <hr>
-
-    <h4 class="mb-5">Para ver los comentarios registrados: </h4>
-
-    <a href="<?= ROOT ?>/listado_comentarios.php" class="btn btn-primary">Ver comentarios&emsp;<span
-                class="fa fa-list-ul"></span></a>
 
 <?php require 'plantillas/footer.php'; ?>

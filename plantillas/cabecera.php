@@ -22,4 +22,26 @@ require 'conexion.php';
     <title>Comentarios</title>
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CEFDFD;">
+
+    <span class="navbar-brand mb-0 h1">CC</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= ROOT ?>/index.php">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= ROOT ?>/listado_comentarios.php">Comentarios</a>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <a class="nav-link btn btn-outline-info" href="<?= ROOT ?>/iniciar_sesion.php">Iniciar Sesión</a>
+        </ul>
+
+    </div>
+</nav>
+
 <body class="container">
