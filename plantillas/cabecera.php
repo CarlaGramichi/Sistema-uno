@@ -80,7 +80,7 @@ require 'conexion.php';
                 </div>
                 <div class="modal-footer  ">
                     <h>No tienes una cuenta!</h>
-                    <p><a href="<? ROOT ?>registro_usuario.php" class="tooltip-test  text-info" title="Tooltip">Registrate aquí</a></p>
+                    <p><a href="<?= ROOT ?>/registro_usuario.php" class="tooltip-test  text-info" title="Tooltip">Registrate aquí</a></p>
                 </div>
             </div>
         </div>

@@ -32,6 +32,7 @@
                 </div>
 
             </div>
+
             <div class="form-group row">
 
                 <span style="font-size: 25px" class="col:sm-2"><i class="far fa-envelope"></i></span>
@@ -39,6 +40,8 @@
                 <div class="form-group col-sm-10">
                     <input type="text" name="ocupacion" placeholder="Ocupación" class="form-control" required>
                 </div>
+
+            </div>
 
             <div class="form-group row">
 
