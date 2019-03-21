@@ -53,7 +53,7 @@ require 'conexion.php';
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content ">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Bienvenido</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -65,13 +65,13 @@ require 'conexion.php';
                         <div class="form-group row">
                             <span style="font-size: 25px" class="col-sm-1"><i class="fa fa-user"></i></span>
                             <div class="col-sm-11">
-                                <input type="text" class="form-control" name="nombre_usuario" placeholder="Usuario">
+                                <input type="text" class="form-control" name="nombre_usuario" placeholder="Usuario" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <span style="font-size: 25px" class="col-sm-1"><i class="fas fa-key"></i></span>
                             <div class="col-sm-11">
-                                <input type="text" class="form-control" name="contrasena" placeholder="Contraseña">
+                                <input type="text" class="form-control" name="contrasena" placeholder="Contraseña" required>
                             </div>
 
                         </div>
