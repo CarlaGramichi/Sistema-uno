@@ -22,6 +22,10 @@ require 'conexion.php';
     <title>Comentarios</title>
 </head>
 
+<body>
+
+<header>
+
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CEFDFD;">
 
     <span class="navbar-brand mb-0 h1">CC</span>
@@ -44,4 +48,6 @@ require 'conexion.php';
     </div>
 </nav>
 
-<body class="container">
+</header>
+
+<div class="container">

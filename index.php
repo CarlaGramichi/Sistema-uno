@@ -5,12 +5,12 @@
 
     <h4>Por favor ingrese los siguientes datos:</h4>
 
-<?php if ($_REQUEST['mensaje1']): ?>
+<?php if (isset($_REQUEST['mensaje1'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
         <?= $_REQUEST['mensaje1'] ?>
     </div>
-<? endif ?>
+<?php endif ?>
 
     <div class="row justify-content-center">
 
@@ -59,4 +59,4 @@
     </div>
 
 
-<?php require 'plantillas/footer.php'; ?>
+<?php require 'plantillas/footer.php' ?>

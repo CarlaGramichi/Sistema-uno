@@ -9,18 +9,21 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
     <h1 class="mt-5">Comentarios registrados:</h1>
-<?php if ($_REQUEST['mensaje2']): ?>
+
+<?php if (isset($_REQUEST['mensaje2'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
         <?= $_REQUEST['mensaje2'] ?>
     </div>
-<? endif ?>
-<?php if ($_REQUEST['mensaje3']): ?>
+<?php endif ?>
+
+<?php if (isset($_REQUEST['mensaje3'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
         <?= $_REQUEST['mensaje3'] ?>
     </div>
-<? endif ?>
+<?php endif ?>
+
     <table class="table table-striped table-bordered " cellspacing="10">
         <thead>
         <tr>
