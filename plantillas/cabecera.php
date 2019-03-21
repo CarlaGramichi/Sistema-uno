@@ -49,7 +49,7 @@ require 'conexion.php';
         </div>
     </nav>
 </header>
-<form action="<?= ROOT?>/recepcion_inicio.php" method="post">
+<form action="<?= ROOT ?>/recepcion_inicio.php" method="post">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -73,15 +73,20 @@ require 'conexion.php';
                             <div class="col-sm-11">
                                 <input type="text" class="form-control" name="contrasena" placeholder="Contraseña">
                             </div>
+
                         </div>
+                        <button type="submit" class="btn btn-info btn-block">Iniciar Sesión</button>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <!-- TODO: Cambiar el tipo del boton a submit -->
-                    <button type="button" class="btn btn-info btn-block">Iniciar Sesión</button>
+                <div class="modal-footer  ">
+                    <h>No tienes una cuenta!</h>
+                    <p><a href="<? ROOT ?>registro_usuario.php" class="tooltip-test  text-info" title="Tooltip">Registrate aquí</a></p>
                 </div>
             </div>
         </div>
+
+    </div>
+
     </div>
 </form>
 <div class="container">
