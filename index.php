@@ -1,6 +1,5 @@
 <?php require 'plantillas/cabecera.php'; ?>
 
-
     <h1 class="mt-5">Bienvenido</h1>
 
     <h4>Por favor ingrese los siguientes datos:</h4>
