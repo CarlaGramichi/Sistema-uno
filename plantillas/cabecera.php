@@ -77,6 +77,7 @@ require 'conexion.php';
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <!-- TODO: Cambiar el tipo del boton a submit -->
                     <button type="button" class="btn btn-info btn-block">Iniciar Sesión</button>
                 </div>
             </div>
