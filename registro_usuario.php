@@ -51,10 +51,9 @@
                                   class="form-control"></textarea>
                 </div>
             </div>
-    </div>
-    <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
-    </form>
 
+            <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
+        </form>
     </div>
 
 
