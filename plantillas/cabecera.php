@@ -43,7 +43,7 @@ require 'conexion.php';
 
                 <button type="button" class="nav-link btn btn-outline-info" data-toggle="modal"
                         data-target="#exampleModal" data-whatever="email@...">
-                    Iniciar Sesión <span><i class="fas fa-sign-in-alt"></i></span>
+                    Iniciar Sesión &emsp; <i class="fas fa-sign-in-alt"></i>
                 </button>
             </ul>
         </div>
@@ -79,8 +79,7 @@ require 'conexion.php';
                     </form>
                 </div>
                 <div class="modal-footer  ">
-                    <h>No tienes una cuenta!</h>
-                    <p><a href="<?= ROOT ?>/registro_usuario.php" class="tooltip-test  text-info" title="Tooltip">Registrate aquí</a></p>
+                    <p>No tiene una cuenta!<a href="<?= ROOT ?>/registro_usuario.php" class="tooltip-test  text-info" title="Registarte">Registrate aquí</a></p>
                 </div>
             </div>
         </div>
