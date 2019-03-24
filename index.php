@@ -4,12 +4,23 @@
 
     <h4>Por favor ingrese los siguientes datos:</h4>
 
-<?php if (isset($_REQUEST['mensaje1'])): ?>
+<?php if (isset($_REQUEST['mensaje'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
-        <?= $_REQUEST['mensaje1'] ?>
+        <?= $_REQUEST['mensaje'] ?>
     </div>
 <?php endif ?>
+
+<?php //if (isset($_REQUEST['error'])): ?>
+<!---->
+<!--    <div class="alert alert-danger col-sm-6 font-weight-bold" role="alert">-->
+<!--        <ul>-->
+<!--            --><?php //foreach ($_REQUEST['error'] as $error): ?>
+<!--                <li>--><?//= $error ?><!--</li>-->
+<!--            --><?php //endforeach ?>
+<!--        </ul>-->
+<!--    </div>-->
+<?php //endif ?>
 
     <div class="row justify-content-center">
 

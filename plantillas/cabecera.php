@@ -37,11 +37,24 @@ require 'conexion.php';
                     <a class="nav-link" href="<?= ROOT ?>/listado_comentarios.php">Comentarios</a>
             </ul>
             <ul class="navbar-nav ml-auto">
+                <form class="form-inline my-2 my-lg-0">
+                    <?php if ($_SESSION['usuario']): ?>
+                        <a href="#" class="text-info text-uppercase">
+                            <strong><?= $_SESSION['usuario']['apellido'] ?>, <?= $_SESSION['usuario']['nombre'] ?></strong></a>&emsp;
+                        <a href="<?= ROOT ?>/cerrar_sesion.php">
+                            <button type="button" class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal"
+                                    data-target="#exampleModal" data-whatever="email@...">
+                                Salir &emsp;<i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </a>
 
+                    <?php else: ?>
+                </form>
                 <button type="button" class="nav-link btn btn-outline-info" data-toggle="modal"
                         data-target="#exampleModal" data-whatever="email@...">
                     Iniciar Sesión &emsp; <i class="fas fa-sign-in-alt"></i>
                 </button>
+                <?php endif ?>
             </ul>
         </div>
     </nav>
@@ -62,13 +75,16 @@ require 'conexion.php';
                         <div class="form-group row">
                             <span style="font-size: 25px" class="col-sm-1"><i class="fa fa-user"></i></span>
                             <div class="col-sm-11">
-                                <input type="text" class="form-control" name="nombre_usuario" placeholder="Usuario" required>
+                                <input type="text" class="form-control" name="nombre_usuario"
+                                       placeholder="Email o Usuario"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <span style="font-size: 25px" class="col-sm-1"><i class="fas fa-key"></i></span>
                             <div class="col-sm-11">
-                                <input type="text" class="form-control" name="contrasena" placeholder="Contraseña" required>
+                                <input type="password" class="form-control" name="contrasena" placeholder="Contraseña"
+                                       required>
                             </div>
 
                         </div>
@@ -76,7 +92,8 @@ require 'conexion.php';
                     </form>
                 </div>
                 <div class="modal-footer  ">
-                    <p>No tiene una cuenta!<a href="<?= ROOT ?>/registro_usuario.php" class="tooltip-test  text-info" title="Registarte">Registrate aquí</a></p>
+                    <p>No tiene una cuenta!<a href="<?= ROOT ?>/registro_usuario.php" class="tooltip-test  text-info"
+                                              title="Registarte">Registrate aquí</a></p>
                 </div>
             </div>
         </div>

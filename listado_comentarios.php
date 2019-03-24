@@ -4,23 +4,16 @@ require 'plantillas/cabecera.php';
 
 $con = conectar();
 $consulta = $con->query("SELECT id,nombre,comentario,fecha_creacion FROM comentarios ");
-$coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
+$comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
     <h1 class="mt-5">Comentarios registrados:</h1>
 
-<?php if (isset($_REQUEST['mensaje2'])): ?>
+<?php if (isset($_REQUEST['mensaje'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
-        <?= $_REQUEST['mensaje2'] ?>
-    </div>
-<?php endif ?>
-
-<?php if (isset($_REQUEST['mensaje3'])): ?>
-    <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
-        <span> <i class="fas fa-check"></i> </span>
-        <?= $_REQUEST['mensaje3'] ?>
+        <?= $_REQUEST['mensaje'] ?>
     </div>
 <?php endif ?>
 
@@ -38,29 +31,29 @@ $coment = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
         <tbody>
 
-        <?php foreach ($coment as $comenta): ?>
+        <?php foreach ($comentarios as $comentario): ?>
             <tr>
-                <td><?= $comenta['id'] ?></td>
-                <td><?= $comenta['nombre'] ?></td>
-                <td><?= $comenta['comentario'] ?></td>
-                <td><?= $comenta['fecha_creacion'] ?></td>
+                <td><?= $comentario['id'] ?></td>
+                <td><?= $comentario['nombre'] ?></td>
+                <td><?= $comentario['comentario'] ?></td>
+                <td><?= $comentario['fecha_creacion'] ?></td>
 
                 <td class="text-center">
-                    <form action="<?= ROOT ?>/ver_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <form action="<?= ROOT ?>/ver_comentario.php?id=<?= $comentario['id'] ?>" method="post">
                         <button type="submit" class="btn btn-success btn-sm">Ver&emsp;<span class="fa fa-eye"></span>
                         </button>
                     </form>
                 </td>
 
                 <td class="text-center">
-                    <form action="<?= ROOT ?>/editar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <form action="<?= ROOT ?>/editar_comentario.php?id=<?= $comentario['id'] ?>" method="post">
                         <button type="submit" class="btn btn-primary btn-sm">Editar&emsp;<span
                                     class="fa fa-edit"></span></button>
                     </form>
                 </td>
 
                 <td class="text-center">
-                    <form action="<?= ROOT ?>/eliminar_comentario.php?id=<?= $comenta['id'] ?>" method="post">
+                    <form action="<?= ROOT ?>/eliminar_comentario.php?id=<?= $comentario['id'] ?>" method="post">
                         <button type="submit" class="btn btn-danger btn-sm">Eliminar&emsp;<span
                                     class="fa fa-trash"></span></button>
                     </form>

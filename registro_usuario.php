@@ -4,7 +4,7 @@
 
     <div class="row justify-content-center">
 
-        <form action="<?= ROOT ?>/recepcion_registro_usuario.php" method="get" class="col-sm-8 mt-2">
+        <form action="<?= ROOT ?>/recepcion_registro_usuario.php" method="post" class="col-sm-8 mt-2">
 
             <div class="form-group row">
                 <div class="col-sm-6">

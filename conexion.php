@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 define('ROOT', 'http://localhost/Sistema-uno');
 function conectar()
 {
