@@ -17,6 +17,8 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
     </div>
 <?php endif ?>
 
+
+<?php if ($_SESSION['usuario']): ?>
     <table class="table table-striped table-bordered " cellspacing="10">
         <thead>
         <tr>
@@ -66,7 +68,7 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
 
     </table>
-
+<?php endif ?>
 
     <a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
 

@@ -30,7 +30,7 @@ require 'conexion.php';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= ROOT ?>/inicio.php">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?= ROOT ?>/index.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= ROOT ?>/listado_comentarios.php">Comentarios</a>
@@ -52,7 +52,10 @@ require 'conexion.php';
                 <button type="button" class="nav-link btn btn-outline-info" data-toggle="modal"
                         data-target="#exampleModal" data-whatever="email@...">
                     Iniciar Sesión &emsp; <i class="fas fa-sign-in-alt"></i>
-                </button>
+                </button>&emsp;
+                <a href="<?=ROOT?>/registro_usuario.php" class="nav-link btn btn-outline-info">
+                    Registro &emsp; <i class="fas fa-user-plus"></i>
+                </a>
                 <?php endif ?>
             </ul>
         </div>

@@ -7,7 +7,7 @@ $consulta = $conn->query("INSERT INTO usuarios(nombre,apellido,dni,fecha_nac,ocu
 if (!$consulta) {
     var_dump($conn->errorInfo());
 } else {
-    header("Location:" .ROOT. "/?mensaje =Los datos se guardaron correctamente.Inicie Sesión");
+    header("Location:" .ROOT. "/?mensaje=Los datos se guardaron correctamente.Inicie Sesión");
 }
 
 
