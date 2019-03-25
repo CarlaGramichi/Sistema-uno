@@ -55,14 +55,15 @@
 
             </div>
 
-            <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
+            <button type="submit" class="btn btn-info col-sm-11">Guardar Datos</button>
 
         </form>
 
     </div>
 <?php else: ?>
     <br>
-    <h5>No estas registrado. Inicia <a href="<?= ROOT ?>" class="text-info">Sesión acá</a> o <a
+    <h5>No estas registrado. Inicia <a href="<?= ROOT ?>" class="text-info" data-toggle="modal"
+        data-target="#exampleModal">Sesión acá</a> o <a
                 href="<?= ROOT ?>/registro_usuario.php" class="text-info">Crea una cuenta acá.</a></h5>
     <fieldset disabled>
 
@@ -86,9 +87,7 @@
                 </div>
 
                 <div class="form-group row">
-
                     <span style="font-size: 25px" class="col:sm-2"><i class="far fa-envelope"></i></span>
-
                     <div class="form-group col-sm-10">
                         <input type="email" name="email" placeholder="Email" class="form-control"
                                value="<?= $_SESSION['usuario']['email'] ?>" required readonly>
@@ -108,7 +107,7 @@
 
                 </div>
 
-                <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
+                <button type="submit" class="btn btn-info col-sm-11">Guardar Datos</button>
 
             </form>
 
