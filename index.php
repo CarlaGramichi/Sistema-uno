@@ -63,7 +63,7 @@
 <?php else: ?>
     <br>
     <h5>No estas registrado. Inicia <a href="<?= ROOT ?>" class="text-info">Sesión acá</a> o <a
-                href="<?= ROOT ?>/registro_usuario.php" class="text-info">Creá una cuenta acá.</a></h5>
+                href="<?= ROOT ?>/registro_usuario.php" class="text-info">Crea una cuenta acá.</a></h5>
     <fieldset disabled>
 
         <div class="row justify-content-center">

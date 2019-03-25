@@ -3,7 +3,7 @@ session_start();
 require'conexion.php';
 $con=conectar();
 $consulta = $con->prepare("UPDATE comentarios SET comentario='{$_REQUEST['comentario']}' WHERE id = {$_REQUEST['id']} " );
-$coment = $consulta->execute();
+$usuarios = $consulta->execute();
 
 //var_dump($consulta->queryString);
 
