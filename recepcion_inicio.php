@@ -23,12 +23,12 @@ $consulta = $conn->prepare("
 $consulta->execute();
 $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
-$_SESSION['usuario'] = $usuario;
-
 if (!$usuario) {
-    header("Location:" . ROOT . "/?error1= Nombre y/o contraseña incorrectos.");
+    header("Location:" . ROOT . "/?error=Nombre y/o contraseña incorrectos.");
 } else {
-    header("Location:" . ROOT . "");
+    $_SESSION['usuario'] = $usuario;
+
+    header("Location:" . ROOT);
 }
 
 ?>

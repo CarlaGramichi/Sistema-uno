@@ -8,7 +8,7 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-    <h1 class="mt-5">Comentarios registrados:</h1>
+
 
 <?php if (isset($_REQUEST['mensaje'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
@@ -18,7 +18,10 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 <?php endif ?>
 
 
-<?php if ($_SESSION['usuario']): ?>
+<?php if (isset($_SESSION['usuario'])): ?>
+
+    <h1 class="mt-5">Comentarios registrados:</h1>
+
     <table class="table table-striped table-bordered " cellspacing="10">
         <thead>
         <tr>
@@ -68,6 +71,13 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
 
     </table>
+
+<?php else:?>
+
+    <h5>No estas registrado. Inicia <a href="<?= ROOT ?>" class="text-info" data-toggle="modal"
+                                       data-target="#exampleModal">Sesión acá</a> o <a
+                href="<?= ROOT ?>/registro_usuario.php" class="text-info">Crea una cuenta acá.</a></h5>
+
 <?php endif ?>
 
     <a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>

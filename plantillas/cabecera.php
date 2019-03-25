@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 
 require 'conexion.php';
 
@@ -37,7 +38,7 @@ require 'conexion.php';
             </ul>
             <ul class="navbar-nav ml-auto">
                 <form class="form-inline my-2 my-lg-0">
-                    <?php if ($_SESSION['usuario']):?>
+                    <?php if (isset($_SESSION['usuario'])):?>
                         <a href="<?= ROOT ?>/perfil_usuario.php" class="text-info text-uppercase">
                             <strong><?= $_SESSION['usuario']['apellido'] ?>, <?= $_SESSION['usuario']['nombre'] ?></strong></a>&emsp;
                         <a href="<?= ROOT ?>/cerrar_sesion.php">
