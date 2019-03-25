@@ -22,7 +22,6 @@ require 'conexion.php';
 <header>
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CEFDFD;">
-
         <span class="navbar-brand mb-0 h1">CC</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,15 +30,15 @@ require 'conexion.php';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= ROOT ?>/index.php">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?= ROOT ?>/inicio.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= ROOT ?>/listado_comentarios.php">Comentarios</a>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <form class="form-inline my-2 my-lg-0">
-                    <?php if ($_SESSION['usuario']): ?>
-                        <a href="#" class="text-info text-uppercase">
+                    <?php if ($_SESSION['usuario']):?>
+                        <a href="<?= ROOT ?>/perfil_usuario.php?id=<?=?>" class="text-info text-uppercase">
                             <strong><?= $_SESSION['usuario']['apellido'] ?>, <?= $_SESSION['usuario']['nombre'] ?></strong></a>&emsp;
                         <a href="<?= ROOT ?>/cerrar_sesion.php">
                             <button type="button" class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal"

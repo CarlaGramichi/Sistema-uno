@@ -53,7 +53,7 @@ $array_asociativo_1['personas'][] = [
 ];
 
 foreach ($array_asociativo_1['personas'] as $llave => $persona) {
-    echo "El usuario {$persona['nombre']} está logeado. Tiene {$persona['edad']} años.<br>";
+    echo "El usuario {$persona['nombre']} está logueado. Tiene {$persona['edad']} años.<br>";
 }
 
 echo "Arrays asociativos utilizando bases de datos.<br>";
