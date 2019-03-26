@@ -12,11 +12,8 @@
     <h4>Por favor ingrese los siguientes datos:</h4>
     <div class="row justify-content-center">
         <form action="<?= ROOT ?>/recepcion.php" method="get" class="col-sm-6 mt-4">
-
             <div class="form-group row">
-
                 <span style="font-size: 25px" class="col:sm-2"><i class="fa fa-user"></i></span>
-
                 <div class="col-sm-5">
                     <input type="text" class="form-control" name="nombre" placeholder="Nombre"
                            value="<?= isset($_SESSION['usuario']) ? $_SESSION['usuario']['nombre'] : '' ?>"

@@ -9,7 +9,6 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-
 <?php if (isset($_REQUEST['mensaje'])): ?>
     <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
@@ -20,7 +19,7 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <?php if (isset($_SESSION['usuario'])): ?>
 
-    <h1 class="mt-5">Comentarios registrados:</h1>
+    <h4 class="mt-5">Comentarios registrados:</h4>
 
     <table class="table table-striped table-bordered " cellspacing="10">
         <thead>
