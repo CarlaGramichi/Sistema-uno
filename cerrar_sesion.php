@@ -3,4 +3,4 @@ include 'conexion.php';
 
 session_destroy();
 
-header("Location:" . ROOT."/index.php");
+header("Location:" . ROOT);

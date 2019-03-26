@@ -1,7 +1,4 @@
-<?php require 'plantillas/cabecera.php';
-
-
-if(isset($_SESSION['usuario'])):?>
+<?php require 'plantillas/cabecera.php';?>
 
 
 <h4 class="mt-5">Escribe tu post aquí:</h4>
@@ -37,13 +34,6 @@ if(isset($_SESSION['usuario'])):?>
                 <?= !isset($_SESSION['usuario']) ? 'disabled' : '' ?>>Guardar Datos</button>
         </form>
     </div>
-<?php else:?>
-   <br> <h5>Para escribir un post debes estar registrado. Inicia <a href="<?= ROOT ?>" class="text-info" data-toggle="modal"
-                                       data-target="#exampleModal">Sesión acá</a> o <a
-            href="<?= ROOT ?>/registro_usuario.php" class="text-info">Crea una cuenta acá.</a></h5>
-    <br><a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
-
-<?php endif ?>
 
 
 <?php require 'plantillas/footer.php';?>

@@ -31,7 +31,7 @@ require 'conexion.php';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= ROOT ?>/index.php">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?= ROOT ?>">Inicio<span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -39,6 +39,7 @@ require 'conexion.php';
                         Qué hacer?
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-info" href="<?= ROOT ?>/registro_comentario.php">Comentá</a>
                         <a class="dropdown-item text-info" href="<?= ROOT ?>/listado_comentarios.php">Ver Comentarios</a>
                         <a class="dropdown-item text-info" href="<?= ROOT ?>/registro_post.php">Crea tu Post</a>
                     </div>
