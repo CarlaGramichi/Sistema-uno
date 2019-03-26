@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-info btn-block">Guardar Datos</button>
+            <button type="submit" class="btn btn-info col-sm-11">Guardar Datos</button>
         </form>
     </div>
 
