@@ -33,8 +33,17 @@ require 'conexion.php';
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= ROOT ?>/index.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= ROOT ?>/listado_comentarios.php">Comentarios</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Qué hacer?
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-info" href="<?= ROOT ?>/listado_comentarios.php">Ver Comentarios</a>
+                        <a class="dropdown-item text-info" href="<?= ROOT ?>/registro_post.php">Crea tu Post</a>
+                    </div>
+                </li>
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <form class="form-inline my-2 my-lg-0">

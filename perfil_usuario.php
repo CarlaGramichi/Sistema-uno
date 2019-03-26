@@ -33,3 +33,5 @@ $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
             class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php'; ?>
+
+

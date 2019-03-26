@@ -65,7 +65,7 @@ CREATE TABLE `posts` (
   `usuario_id` int(11) DEFAULT NULL,
   `titulo` varchar(255) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `extarcto` varchar(255) NOT NULL,
+  `extracto` varchar(255) NOT NULL,
   `cuerpo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

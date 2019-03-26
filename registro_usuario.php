@@ -1,6 +1,6 @@
 <?php require 'plantillas/cabecera.php'; ?>
 
-    <h4 class="mt-5">Por favor ingrese los siguientes datos:</h4>
+    <h4 class="mt-5">Por favor, ingrese los siguientes datos:</h4>
 
     <div class="row justify-content-center">
 

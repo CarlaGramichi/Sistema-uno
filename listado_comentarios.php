@@ -74,12 +74,12 @@ $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 <?php else:?>
 
-    <h5>No estas registrado. Inicia <a href="<?= ROOT ?>" class="text-info" data-toggle="modal"
+    <br><h5>Para ver los comentarios debes estar registrado. Inicia <a href="<?= ROOT ?>" class="text-info" data-toggle="modal"
                                        data-target="#exampleModal">Sesión acá</a> o <a
                 href="<?= ROOT ?>/registro_usuario.php" class="text-info">Crea una cuenta acá.</a></h5>
 
 <?php endif ?>
 
-    <a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
+    <br><a href="<?= ROOT ?>" class="btn btn-info"><span class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php'; ?>

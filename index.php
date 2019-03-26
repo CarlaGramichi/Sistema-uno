@@ -1,7 +1,7 @@
 <?php require 'plantillas/cabecera.php'; ?>
 
 <?php if (isset($_REQUEST['mensaje'])): ?>
-    <div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
+    <br><div class="alert alert-success col-sm-6 font-weight-bold" role="alert">
         <span> <i class="fas fa-check"></i> </span>
         <?= $_REQUEST['mensaje'] ?>
     </div>
@@ -43,12 +43,13 @@
                 <span style="font-size: 25px" class="col:sm-2"><i class="far fa-edit"></i></span>
                 <div class="form-group col-sm-10">
                 <textarea name="comentario" placeholder="Comentario" cols="25" rows="6" class="form-control"
-                    <?= !isset($_SESSION['usuario']) ? 'disabled' : 'required'?>></textarea>
+                    <?= !isset($_SESSION['usuario']) ? 'disabled' : ''?>></textarea>
                 </div>
 
             </div>
 
-            <button type="submit" class="btn btn-info col-sm-11"  <?= !isset($_SESSION['usuario']) ? 'disabled' : '' ?>>Guardar Datos</button>
+            <button type="submit" class="btn btn-info col-sm-11"
+                <?= !isset($_SESSION['usuario']) ? 'disabled' : '' ?>>Guardar Datos</button>
 
         </form>
 

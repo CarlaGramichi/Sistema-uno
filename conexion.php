@@ -2,6 +2,9 @@
 session_start();
 
 define('ROOT', 'http://localhost/Sistema-uno');
+
+include 'funciones.php';
+
 function conectar()
 {
     $servidor = 'localhost';
