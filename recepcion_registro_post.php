@@ -3,6 +3,7 @@
 require 'conexion.php';
 
 $conn = conectar();
+
 $_REQUEST['usuario_id'] = $_SESSION['usuario']['id'];
 
 if (!$conn->query(insertar('posts', $_REQUEST))) {

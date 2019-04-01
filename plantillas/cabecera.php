@@ -115,4 +115,4 @@ require 'conexion.php';
 
     </div>
 </form>
-<div class="container">
+<div class="container-fluid">
