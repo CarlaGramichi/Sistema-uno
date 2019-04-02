@@ -21,3 +21,21 @@ function conectar()
 
     return $con;
 }
+
+
+function ultimos_comentarios()
+{
+    $conn = conectar();
+
+    $consulta = $conn->query("
+        SELECT 
+          c.comentario,
+          c.id,
+          u.nombre as autor
+        FROM comentarios c
+          JOIN usuarios u ON c.usuario_id = u.id
+        ORDER BY c.fecha_creacion DESC
+        LIMIT 5;");
+
+    return $consulta ? $consulta->fetchAll(PDO::FETCH_ASSOC) : [];
+}

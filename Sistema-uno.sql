@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-03-2019 a las 11:39:31
+-- Tiempo de generación: 02-04-2019 a las 00:05:49
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 5.6.32
 
@@ -30,29 +30,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comentarios` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `apellido` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
   `comentario` text CHARACTER SET utf16 NOT NULL,
-  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `fecha_creacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `usuario_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `comentarios`
 --
 
-INSERT INTO `comentarios` (`id`, `nombre`, `apellido`, `email`, `comentario`, `fecha_creacion`) VALUES
-(37, 'Carla', 'Gramichi', 'caaar.m21@gmail.com', ' kfkldskfldsk', '2019-03-20 13:19:37'),
-(38, 'Carla', 'Fuenzalidalaskflak', 'caaar.m21@gmail.com', 'ksjkasjk', '2019-03-20 13:19:37'),
-(39, 'Carla', 'Gramichi', 'caaar.m21@gmail.com', 'nbnbnb', '2019-03-20 13:19:37'),
-(40, 'Carla', 'Gramichi', 'caaar.m21@gmail.comwejkwej', 'kekjwekfj', '2019-03-20 13:19:37'),
-(41, 'Carla', 'Gramichi', 'caaar.m21@gmail.com', 'eoiotioitoieofieoiroi', '2019-03-20 13:49:16'),
-(42, 'Orne', 'Gramichi', 'caaar.m21@gmail.com', 'wekfoewfewofewo', '2019-03-20 13:54:22'),
-(43, 'Toby', 'Bebe', 'caaar.m21@gmail.com', ' quiero comidita', '2019-03-20 23:57:03'),
-(45, 'Carla', 'Gramichi', 'caaar.m21@gmail.com', 'as das das d', '2019-03-24 14:26:03'),
-(46, 'Carla', 'Gramichi', 'caaar.m21@gmail.com', 'asdasd', '2019-03-24 14:28:26'),
-(47, 'Toby', 'Gramichi', 'toby.bb@kdkf', 'asd asd asd as d', '2019-03-25 00:42:08'),
-(48, 'Tobyas', 'Gramichi', 'toby.bb@kdkf', 'jlkjl', '2019-03-25 00:42:59');
+INSERT INTO `comentarios` (`id`, `comentario`, `fecha_creacion`, `usuario_id`, `post_id`) VALUES
+(4, 'dfgsdfgdfg', '2019-04-01 17:09:00', 14, 8),
+(5, 'hjkg kjgkjgj', '2019-04-01 17:10:50', 14, 8),
+(6, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '2019-04-01 17:11:55', 14, 8),
+(7, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '2019-04-01 22:58:06', 12, 11),
+(8, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '2019-04-02 00:45:39', 14, 8),
+(9, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '2019-04-02 02:38:54', 12, 8),
+(10, '', '2019-04-02 02:50:38', 12, 8);
 
 -- --------------------------------------------------------
 
@@ -68,6 +63,18 @@ CREATE TABLE `posts` (
   `extracto` varchar(255) NOT NULL,
   `cuerpo` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `posts`
+--
+
+INSERT INTO `posts` (`id`, `usuario_id`, `titulo`, `fecha_creacion`, `extracto`, `cuerpo`) VALUES
+(8, 12, 'Lunes a la noche', '2019-03-26 02:49:02', 'lkdkldk', 'kdlkwlkdlwqkdlkwqlkdlqkwdlkwqld'),
+(9, 12, 'lkfdlkgldfkl', '2019-03-26 02:51:30', 'lweklewkflkelkew', 'lwkeflkwelfkewlk'),
+(10, 12, 'welkflweklk', '2019-03-26 02:52:35', 'lwe,flewl', 'lwdlwl'),
+(11, 12, 'welkflweklk', '2019-03-26 02:53:59', 'lwe,flewl', 'lwdlwl'),
+(12, 14, 'asd as d', '2019-03-30 01:34:42', 'as das d', 'asd as d'),
+(13, 14, 'Hola', '2019-04-01 23:03:23', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.');
 
 -- --------------------------------------------------------
 
@@ -100,7 +107,8 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `dni`, `fecha_nac`, `ocupaci
 (7, 'Carla', 'Gramichi', 36540057, '1991-08-21', 'estudiante', 'car@gmail.com', 'Car', 0x31323334, '', 'wijfiwjfijwefjewifjiejfi', '2019-03-24 19:38:27'),
 (8, 'Sela', 'Fuenzalida', 13379864, '1999-12-10', 'Enfermera', 'sel03@gmal.com', 'Sel', 0x31323334, '', 'dkfkdjfjdkjg', '2019-03-24 19:45:53'),
 (12, 'Toby', 'Gramichi', 872871878, '2015-02-01', 'hijo', 'toby.bb@kdkf', 'toby', 0x31323334, '', 'jqwhdjhjhds', '2019-03-24 19:51:01'),
-(13, 'Carla', 'Gramichi', 36540057, '0000-00-00', 'estudiante', 'caaar.m21@gmaisl.com', 'Carla Gramichi', 0x31323334, '', 'hjlkhjkl', '2019-03-25 00:47:23');
+(13, 'Carla', 'Gramichi', 36540057, '0000-00-00', 'estudiante', 'caaar.m21@gmaisl.com', 'Carla Gramichi', 0x31323334, '', 'hjlkhjkl', '2019-03-25 00:47:23'),
+(14, 'Carla', 'Gramichi', 36540057, '1991-08-21', 'estudiante', 'caaar.m21@gmai', 'Carla ', 0x31323334, '', 'kjkjkjkj', '2019-03-26 16:47:00');
 
 --
 -- Índices para tablas volcadas
@@ -110,7 +118,9 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `dni`, `fecha_nac`, `ocupaci
 -- Indices de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `comentarios_usuarios_id_fk` (`usuario_id`),
+  ADD KEY `comentarios_posts_id_fk` (`post_id`);
 
 --
 -- Indices de la tabla `posts`
@@ -134,23 +144,30 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_posts_id_fk` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentarios_usuarios_id_fk` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `posts`
