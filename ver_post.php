@@ -68,22 +68,27 @@ if ($consulta) {
                     </strong></p>
             <?php endif;
             $con = conectar();
-            $consulta = $con->query("SELECT comentario,fecha_creacion
-FROM comentarios WHERE post_id ={$_REQUEST['id']} ORDER BY fecha_creacion ASC");
+            $consulta = $con->query("SELECT c.comentario,c.fecha_creacion, u.nombre as nombre,u.id 
+FROM comentarios as c
+JOIN usuarios u ON c.usuario_id = u.id
+ WHERE post_id ={$_REQUEST['id']} ORDER BY c.fecha_creacion ASC");
             $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
-            //            var_dump($comentarios);
+//            var_dump($comentarios);
             ?>
             <br> <h4>Comentarios: </h4>
 
-                <?php foreach ($comentarios as $comentario): ?>
-                    <div class="card border-info mb-3" style="max-width: 60rem;">
-                        <div class="card-header"><?= formatoFecha($comentario['fecha_creacion'])?></div>
-                        <div class="card-body text-info">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text text-justify"><?= $comentario['comentario'] ?></p>
-                        </div>
+            <?php foreach ($comentarios as $comentario): ?>
+                <div class="card border-info mb-3" style="max-width: 60rem;">
+                    <div class="card-header"><em> <?=$comentario['nombre'] ?>&emsp;
+                    <span><?= formatoFecha($comentario['fecha_creacion']) ?></em></span>
                     </div>
-                <?php endforeach ?>
+                    <div class="card-body text-info">
+                        <h5 class="card-title"></h5>
+
+                        <p class="card-text text-justify"><?= $comentario['comentario'] ?></p>
+                    </div>
+                </div>
+            <?php endforeach ?>
         </div>
         <div class="col-sm-4">
             <?php include 'aside.php' ?>
@@ -92,8 +97,8 @@ FROM comentarios WHERE post_id ={$_REQUEST['id']} ORDER BY fecha_creacion ASC");
         </form>
     </div>
     <br>
-        <a href="<?= ROOT ?>" class="btn btn-info"><span
-                    class="fa fa-arrow-left"></span>&emsp;Volver</a>
+    <a href="<?= ROOT ?>" class="btn btn-info"><span
+                class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php';
 
