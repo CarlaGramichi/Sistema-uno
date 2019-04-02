@@ -44,7 +44,7 @@ if ($consulta) {
             </div>
             <br>
             <?php if (isset($_SESSION['usuario'])): ?>
-                <h4>No te olvides de dejar tu comentario:</h4>
+                <h4>No olvides de dejar tu comentario:</h4>
                 <div class="row justify-content-center">
                     <form action="<?= ROOT ?>/recepcion.php?post_id=<?= $post['id'] ?>"
                           method="post" class="col-sm-6 mt-4">
@@ -60,10 +60,30 @@ if ($consulta) {
                         </button>
                 </div>
             <?php else: ?>
-                <p>No estás registrado. Si quieres comentar el post
-                    <a href="recepcion_inicio.php" data-toggle="modal" data-target="#exampleModal">
-                        sesión</a></p>
-            <?php endif; ?>
+                <p><strong>No estás registrado. Si quieres comentar el post
+                        <a href="recepcion_inicio.php" data-toggle="modal" data-target="#exampleModal"
+                           class="text-info">
+                            Inicia sesión </a> o
+                        <a href="registro_usuario.php" class="text-info">Registrate aquí.</a>
+                    </strong></p>
+            <?php endif;
+            $con = conectar();
+            $consulta = $con->query("SELECT comentario,fecha_creacion
+FROM comentarios WHERE post_id ={$_REQUEST['id']} ORDER BY fecha_creacion ASC");
+            $comentarios = $consulta->fetchAll(PDO::FETCH_ASSOC);
+            //            var_dump($comentarios);
+            ?>
+            <br> <h4>Comentarios: </h4>
+
+                <?php foreach ($comentarios as $comentario): ?>
+                    <div class="card border-info mb-3" style="max-width: 60rem;">
+                        <div class="card-header"><?= formatoFecha($comentario['fecha_creacion'])?></div>
+                        <div class="card-body text-info">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text text-justify"><?= $comentario['comentario'] ?></p>
+                        </div>
+                    </div>
+                <?php endforeach ?>
         </div>
         <div class="col-sm-4">
             <?php include 'aside.php' ?>
@@ -72,8 +92,8 @@ if ($consulta) {
         </form>
     </div>
     <br>
-    <!--    <a href="--><?//= ROOT ?><!--" class="btn btn-info"><span-->
-    <!--                class="fa fa-arrow-left"></span>&emsp;Volver</a>-->
+        <a href="<?= ROOT ?>" class="btn btn-info"><span
+                    class="fa fa-arrow-left"></span>&emsp;Volver</a>
 
 <?php require 'plantillas/footer.php';
 
