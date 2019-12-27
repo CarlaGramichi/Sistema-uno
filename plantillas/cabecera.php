@@ -40,7 +40,10 @@ require 'conexion.php';
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-info" href="<?= ROOT ?>/registro_post.php">Crea tu Post</a>
+                        <a class="dropdown-item text-info" href="<?= ROOT ?>/listar_noticias.php">Ver listado de post</a>
+
                     </div>
+
                 </li>
 
             </ul>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('ROOT', 'http://localhost/Sistema-uno');
+define('ROOT', 'http://localhost/noticias_pdf');
 
 include 'funciones.php';
 
@@ -10,8 +10,8 @@ function conectar()
     $servidor = 'localhost';
     $usuario = 'root';
     $contrasena = '';
-    $nombreBD = 'mi_primer_sistemita_completo';
-    $puerto = '3006';
+    $nombreBD = 'noticias_pdf';
+    $puerto = '3306';
 
     try {
         $con = new PDO("mysql:host=$servidor;port=$puerto;dbname=$nombreBD", $usuario, $contrasena);
